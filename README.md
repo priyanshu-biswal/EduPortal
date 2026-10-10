@@ -1,21 +1,21 @@
-# Anti Gravity — Multi-Tenant Transaction Integrity Platform 🚀
+# EduPortal — Multi-Tenant Transaction Integrity & Exam Clearance Platform 🚀
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20TailwindCSS%20%7C%20PostgreSQL-3178C6)](https://github.com/)
 [![Build Status](https://img.shields.io/badge/Build-Passing-emerald)](https://github.com/)
 
-**Anti Gravity** is a B2B multi-tenant SaaS platform that automates real-time transaction synchronization between university **Accounts Sections** and **Exam Eligibility Systems**. By eliminating manual fee receipt verifications, it prevents operational backlogs, eliminates human entry errors, and provides real-time exam clearance status for students.
+**EduPortal** is a B2B multi-tenant SaaS platform that automates real-time transaction synchronization between university **Accounts Sections** and **Exam Eligibility Systems**. By eliminating manual fee receipt verifications, it prevents administrative backlogs, eliminates human entry errors, and provides real-time exam clearance status for students.
 
 ---
 
 ## 📌 Problem Statement
 
-In educational institutions, fee payment records in the accounts database are often disconnected from online exam registration portals. During peak examination windows:
+In educational institutions, fee payment records in the accounts database are often disconnected from online exam registration portals. During peak examination registration windows:
 * **Manual Verification Delays:** Administrative staff must manually cross-verify physical receipts against candidate rosters before issuing hall tickets.
 * **Data Inconsistencies:** Human error leads to eligible students being incorrectly flagged as ineligible.
-* **Scalability Bottlenecks:** System backlogs occur when thousands of students verify fees simultaneously.
+* **Scalability Bottlenecks:** Severe system backlogs occur when thousands of students verify fee clearances simultaneously.
 
-**Anti Gravity** solves this by establishing automated database triggers and API pipelines to guarantee real-time transaction integrity across institutional boundaries.
+**EduPortal** solves this by establishing automated database triggers and API pipelines to guarantee real-time transaction integrity across institutional boundaries.
 
 ---
 
@@ -33,7 +33,7 @@ In educational institutions, fee payment records in the accounts database are of
 
 ## 👨‍💼 Multi-Tenant Stakeholder Architecture
 
-The platform provides role-based access control (RBAC) separated into three distinct operational domains:
+EduPortal provides role-based access control (RBAC) separated into three distinct operational domains:
 
 ### 1. 🏢 Super Admin (SaaS Vendor)
 * **Client Onboarding:** Provisions new partner college database schemas and manages subscription licenses.
@@ -48,7 +48,7 @@ The platform provides role-based access control (RBAC) separated into three dist
 ### 3. 👨‍🎓 Student Portal
 * **Live Status Tracking:** Displays real-time fee clearance and database verification logs.
 * **Self-Service Verification:** Direct access to view fee clearance without physical receipt submission.
-* **Hall Ticket Downloads:** Instant PDF hall ticket download enabled automatically upon clearance.
+* **Hall Ticket Downloads:** Instant PDF hall ticket download enabled automatically upon fee clearance and TPO approval.
 
 ---
 
@@ -68,7 +68,7 @@ The login gateway includes pre-configured demo presets for instant workspace acc
 
 ```mermaid
 flowchart TD
-    A[Multi-Tenant Login Gateway] --> B{Authentication Router}
+    A[EduPortal Login Gateway] --> B{Authentication Router}
     B -->|super@gmail.com| C[Super Admin SaaS Platform]
     B -->|tpo@gmail.com| D[College Accounts DB]
     B -->|student@gmail.com| G[Student Portal]
